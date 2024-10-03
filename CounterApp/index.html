@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter{
+            text-align: center;
+            font-size: 100px;
+        }
+        .controle{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .controle>button{
+            width: 100px;
+            height: 30px;
+            border-radius:  10px;
+
+        }
+        .controle>button:hover{
+            background-color: blue;
+            color: white;
+        }
+        .tc{
+            text-align: center; 
+            font-size: 30px;
+        }
+         body{
+            width: 100%;
+            height: 100vh;
+background-image: url(https://img.freepik.com/free-photo/wavy-black-white-background_23-2150530922.jpg) ;        
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover; 
+
+}
+    </style>
+</head>
+<body>
+
+    <h2 class="tc">Counter App</h2>
+    <div class="counter">0</div>
+    <div class="controle" >
+    <button onclick="inc()">Incriment</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="dec()">decriment</button>
+</div>
+
+
+    <script>
+        "use strict";
+        let count = 0;
+        let counterText = document.querySelectorAll(".counter")[0];
+        counterText.innerHTML = count;
+
+        function update(){
+            counterText.innerHTML = count; 
+        }
+        function inc(){
+            count++; 
+            update()
+        }
+        function reset()
+        {
+            count = 0; 
+            update()
+        }
+        function dec()
+        {
+            count -- ; 
+            update()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-image: url(https://img.freepik.com/free-vector/modern-abstract-white-minimal-background_84443-8365.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0%;
+            display: inline;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clcbox{
+            width: 400px;
+            height: 600px;
+            border: 1px solid black;
+            background-color: black;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: repeat(6, 100px);
+        }
+        .a{
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-style: italic;
+        }
+        .output{
+            grid-column: 1/5;
+            background-color:white;
+            border: 19PX solid black;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            font-size: 50px;
+            color: black;
+
+        }
+        output>span{
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+        #n{
+            grid-column: 1/3;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        #r{
+            grid-column: 1/3;
+        }
+        .k{
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            border-radius: 50%;
+        }
+        /* .e{
+            width: 401px;
+            height: 50px;
+            border: 1px solid white;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="clcbox">
+
+        <div class=" output"> <span id="outid">25</span></div>
+        <div class="a" id="n" onclick="funcler()">clear</div>
+        <div class="a" onclick="funadd()">+</div>
+        <div class="a">-</div>
+        <div class="a" onclick="fun7()">7</div>
+        <div class="a" onclick="fun8()">8</div>
+        <div class="a" onclick="fun9()">9</div>
+        <div class="a" onclick="fundiv()">/</div>
+        <div class="a" onclick="fun4()">4</div>
+        <div class="a" onclick="fun5()">5</div>
+        <div class="a" onclick="fun6()">6</div>
+        <div class="a" onclick="funmulti()" >*</div>
+        <div class="a" onclick="fun1()">1</div>
+        <div class="a" onclick="fun2()">2</div>
+        <div class="a" onclick="fun3()">3</div>
+        <div class="k" onclick="funeql()">=</div>
+        <div class="a" id="r"  onclick="fun0()">0</div>
+        <div class="a" onclick="fundot()">.</div>
+        <!-- <div class="e">backspace</div> -->
+    </div>
+    <script>
+        "use strict";
+        let out = document.getElementById("outid");
+        let str = ""
+        function printO(text){
+            out.innerHTML= str;
+
+        }
+
+        function funcclr() {
+            str += "";
+            printO()
+        }
+        
+        
+        function fun1() {
+            str += "1";
+            printO()
+        }
+        function fun2() {
+            str += "2";
+            printO()
+        }
+        function fun3() {
+            str += "3";
+            printO()
+        }
+        function fun4() {
+            str += "4";
+            printO()
+        }
+        function fun5() {
+            str += "5";
+            printO()
+        }
+        function fun6() {
+            str += "6";
+            printO()
+        }
+        function fun7() {
+            str += "7";
+            printO()
+        }
+        function fun8() {
+            str += "8";
+            printO()
+        }
+        function fun9() {
+            str += "9";
+            printO()
+        }
+        function fun0() {
+            str += "0";
+            printO()
+        }
+        function funadd() {
+            str += "+";
+            printO()
+        }
+        function funsub() {
+            str += "-";
+            printO()
+        }
+        function funmulti() {
+            str += "*";
+            printO()
+        }
+        function fundiv() {
+            str += "/";
+            printO()
+        }
+        function fundot() {
+            str += ".";
+            printO()
+        }
+        function funeql() {
+            str = eval(str)
+            printO()
+        }
+
+    </script>
+</body>
+</html>
